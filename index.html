@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,84 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
     <header>
         <h1>Erik Márquez</h1>
         <p>Científico de Datos</p>
     </header>
-    
-    <section id="about">
-        <h2>Sobre Mí</h2>
-        <p>Soy un apasionado de la ciencia de datos con experiencia en modelado predictivo, análisis financiero y machine learning.</p>
+
+    <section id="carousel">
+        <div class="carousel-container">
+            <img src="banner1.jpg" class="carousel-image">
+            <img src="banner2.jpg" class="carousel-image">
+            <img src="banner3.jpg" class="carousel-image">
+        </div>
     </section>
-    
+
+    <section id="about">
+        <h2>Bienvenido a mi portafolio</h2>
+        <p>Mi nombre es Erik, soy matemático y científico de datos con experiencia en modelado predictivo, análisis
+            financiero y machine learning. Desarrollé esta página para compartir un resumen de mi experiencia y
+            habilidades profesionales, enfocadas especialmente en series de tiempo y su aplicación en el sector
+            financiero y de negocios.</p>
+    </section>
+
     <section id="projects">
         <h2>Proyectos</h2>
-        <ul>
-            <li><strong>Predicción de Cancelación de Clientes:</strong> Modelo de machine learning para predecir la cancelación de clientes en telecomunicaciones.</li>
-            <li><strong>Predicción de Demanda de Taxis:</strong> Modelo de series de tiempo para predecir la demanda de taxis en aeropuertos.</li>
-            <li><strong>Regresión Lineal con Álgebra Matricial:</strong> Implementación de regresión lineal desde cero usando álgebra lineal.</li>
-        </ul>
+        <div class="project">
+            <img src="proyecto1.jpg" alt="Predicción de Cancelación de Clientes">
+            <div class="project-info">
+                <h3>Predicción de Cancelación de Clientes</h3>
+                <p>Modelo de machine learning para predecir la cancelación de clientes en telecomunicaciones.</p>
+                <a href="#">Ver más</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="proyecto2.jpg" alt="Predicción de Demanda de Taxis">
+            <div class="project-info">
+                <h3>Predicción de Demanda de Taxis</h3>
+                <p>Modelo de series de tiempo para predecir la demanda de taxis en aeropuertos.</p>
+                <a href="#">Ver más</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="proyecto3.jpg" alt="Regresión Lineal con Álgebra Matricial">
+            <div class="project-info">
+                <h3>Regresión Lineal con Álgebra Matricial</h3>
+                <p>Implementación de regresión lineal desde cero usando álgebra lineal.</p>
+                <a href="#">Ver más</a>
+            </div>
+        </div>
     </section>
-    
+
     <section id="contact">
         <h2>Contacto</h2>
-        <p>Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
-        <p><a href="https://www.linkedin.com/in/erikmarquez">LinkedIn</a></p>
+        <p>Email: <a href="mailto:sned.erik@gmail.com">tuemail@example.com</a></p>
+        <p><a href="https://www.linkedin.com/in/erikmarquez-datascientist">LinkedIn</a></p>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Erik Márquez</p>
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            let images = $(".carousel-image");
+            let index = 0;
+
+            function showNextImage() {
+                images.eq(index).fadeOut(1000);
+                index = (index + 1) % images.length;
+                images.eq(index).fadeIn(1000);
+            }
+
+            images.hide().eq(0).show();
+            setInterval(showNextImage, 3000);
+        });
+    </script>
 </body>
+
 </html>
