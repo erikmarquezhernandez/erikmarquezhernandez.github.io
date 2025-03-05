@@ -147,3 +147,47 @@ footer {
     font-weight: 600;
     /* Negrita pero no excesiva */
 }
+
+/* Estructura de columnas */
+.project-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-details {
+    flex: 2;
+}
+
+/* Responsive: Apila columnas en móviles */
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para títulos y contenido */
+.project h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.project h4 {
+    color: #3498db;
+    margin: 20px 0 10px;
+    font-size: 1.2em;
+}
