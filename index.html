@@ -266,14 +266,22 @@
             let images = $(".carousel-image");
             let index = 0;
 
-            function showNextImage() {
-                images.eq(index).fadeOut(1000);
-                index = (index + 1) % images.length;
-                images.eq(index).fadeIn(1000);
-            }
+ // Muestra la primera imagen
+        images.eq(index).addClass("active").css("opacity", 1);
 
-            images.hide().eq(0).show();
-            setInterval(showNextImage, 3000);
+        function showNextImage() {
+            // Oculta la imagen actual
+            images.eq(index).removeClass("active").css("opacity", 0);
+
+            // Avanza al siguiente índice
+            index = (index + 1) % images.length;
+
+            // Muestra la siguiente imagen
+            images.eq(index).addClass("active").css("opacity", 1);
+        }
+
+        // Cambia de imagen cada 3 segundos
+        setInterval(showNextImage, 3000);
         });
     </script>
 </body>
