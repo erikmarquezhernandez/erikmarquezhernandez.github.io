@@ -43,8 +43,6 @@
         </div>
     </section>
 
-
-    
     <section id="about">
         <h2>Bienvenido a mi portafolio</h2>
         <p>Mi nombre es Erik, soy matemático y científico de datos, con experiencia en modelado predictivo, análisis
@@ -52,79 +50,108 @@
             habilidades profesionales, enfocadas especialmente en series de tiempo y su aplicación en el sector
             financiero y de negocios.</p>
     </section>
-    
+
     <section id="projects">
-    <h2 style="text-align: center;">Contenido de Portafolio:</h2>
-    
-    <div class="project">
-        <h3>Pronóstico de cancelación de clientes y estrategias de retención</h3>
-        
-        <!-- Columnas solo para "Situación" -->
-        <div class="project-grid">
-            <!-- Columna 1: Imagen -->
-            <div class="project-image">
-                <img src="proyecto1.jpeg" alt="Modelo de retención de clientes">
-            </div>
+        <h2 style="text-align: center;">Contenido de Portafolio:</h2>
 
-            <!-- Columna 2: Situación -->
-            <div class="project-details">
-                <h4>Situación</h4>
-                <p>Interconnect, un operador de telecomunicaciones, enfrenta una alta tasa de cancelación de clientes. Para mitigar esta problemática, la empresa busca un sistema que identifique a los clientes con mayor probabilidad de cancelar, permitiendo así ofrecer códigos promocionales y planes especiales que fomenten la retención.</p>
-            </div>
-        </div>  <!-- Cierre de project-grid -->
-
-        <!-- Resto del contenido en una sola columna -->
-        <div class="project-full">
-            <h4>Tarea</h4>
-            <p>Desarrollar un modelo de Machine Learning capaz de predecir qué clientes tienen mayor probabilidad de cancelar su servicio, con el fin de implementar estrategias de retención más efectivas.</p>
-
-            <h4>Acción</h4>
-            <ul>
-                <li><strong>Análisis exploratorio de datos (EDA):</strong><br>
-                    - Se integraron múltiples bases de datos con información de clientes, contratos y servicios.<br>
-                    - Se transformaron variables categóricas y se detectaron patrones en los datos, como la influencia del tipo de contrato y método de pago en la cancelación.</li>
-                <li><strong>Creación y evaluación de modelos:</strong><br>
-                    - Se probaron varios algoritmos: Árbol de Decisión, Bosques Aleatorios, Regresión Logística, Boosting y Redes Neuronales.<br>
-                    - Se optimizaron hiperparámetros con GridSearchCV.<br>
-                    - La métrica principal fue <strong>AUC-ROC</strong>, obteniendo un valor de <strong>0.85</strong> con LightGBM, el modelo con mejor desempeño.</li>
-                <li><strong>Optimización de la estrategia de retención:</strong><br>
-                    - Se identificó un subconjunto de clientes con alta probabilidad de cancelar.<br>
-                    - Se definió una estrategia de promoción dirigida para estos clientes.</li>
-            </ul>
-
-            <h4>Resultado</h4>
-            <ul>
-                <li>La empresa tiene en promedio <strong>5174 clientes activos y 467 cancelaciones cada mes</strong>, con una tasa de cancelación del <strong>8.29%</strong>.</li>
-                <li>El modelo identificó <strong>694 clientes como cancelaciones</strong>, de los cuales <strong>467 (67.3%)</strong> realmente lo estaban.</li>
-                <li>Si el equipo de marketing ofrece promociones a estos clientes y <strong>el 20% de ellos las acepta</strong>, <strong>93 clientes podrían ser retenidos cada mes</strong>.</li>
-                <li>Esto representaría una <strong>reducción de la tasa de cancelación del 19.91%</strong>, bajando del <strong>8.29% al 6.63%</strong>, con un impacto significativo en la retención y los ingresos de la empresa.</li>
-            </ul>
-        </div>  <!-- Cierre de project-full -->
-    </div>  <!-- Cierre de project -->
-</section>
-    
+        <!-- Proyecto 1 -->
         <div class="project">
-            <img src="proyecto2.jpg" alt="Predicción de demanda de taxis en aeropuertos">
-            <div class="project-info">
-                <h1>Predicción de demanda de taxis en aeropuertos</h1>
-                <p>Sweet Lift Taxi busca optimizar la disponibilidad de conductores en aeropuertos. Se implementó un
-                    modelo de Regresión Lineal con un RMSE de 35.84, permitiendo predecir la demanda con precisión y
-                    mejorar la planificación de recursos.</p>
-                <a
-                    href="https://github.com/erikmarquezhernandez/Proyecto-Series-de-tiempo-compa-ia-de-taxi/blob/main/proyecto%2013.ipynb">Ver
-                    más</a>
+            <h3>Pronóstico de cancelación de clientes y estrategias de retención</h3>
+
+            <!-- Columnas para imagen y situación -->
+            <div class="project-grid">
+                <div class="project-image">
+                    <img src="proyecto1.jpeg" alt="Modelo de retención de clientes">
+                </div>
+                <div class="project-details">
+                    <h4>Situación</h4>
+                    <p>Interconnect, un operador de telecomunicaciones, enfrenta una alta tasa de cancelación de clientes. Para mitigar esta problemática, la empresa busca un sistema que identifique a los clientes con mayor probabilidad de cancelar, permitiendo así ofrecer códigos promocionales y planes especiales que fomenten la retención.</p>
+                </div>
+            </div>
+
+            <!-- Resto del contenido en una sola columna -->
+            <div class="project-full">
+                <h4>Tarea</h4>
+                <p>Desarrollar un modelo de Machine Learning capaz de predecir qué clientes tienen mayor probabilidad de cancelar su servicio, con el fin de implementar estrategias de retención más efectivas.</p>
+
+                <h4>Acción</h4>
+                <ul>
+                    <li><strong>Análisis exploratorio de datos (EDA):</strong><br>
+                        - Se integraron múltiples bases de datos con información de clientes, contratos y servicios.<br>
+                        - Se transformaron variables categóricas y se detectaron patrones en los datos, como la influencia del tipo de contrato y método de pago en la cancelación.</li>
+                    <li><strong>Creación y evaluación de modelos:</strong><br>
+                        - Se probaron varios algoritmos: Árbol de Decisión, Bosques Aleatorios, Regresión Logística, Boosting y Redes Neuronales.<br>
+                        - Se optimizaron hiperparámetros con GridSearchCV.<br>
+                        - La métrica principal fue <strong>AUC-ROC</strong>, obteniendo un valor de <strong>0.85</strong> con LightGBM, el modelo con mejor desempeño.</li>
+                    <li><strong>Optimización de la estrategia de retención:</strong><br>
+                        - Se identificó un subconjunto de clientes con alta probabilidad de cancelar.<br>
+                        - Se definió una estrategia de promoción dirigida para estos clientes.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <ul>
+                    <li>La empresa tiene en promedio <strong>5174 clientes activos y 467 cancelaciones cada mes</strong>, con una tasa de cancelación del <strong>8.29%</strong>.</li>
+                    <li>El modelo identificó <strong>694 clientes como cancelaciones</strong>, de los cuales <strong>467 (67.3%)</strong> realmente lo estaban.</li>
+                    <li>Si el equipo de marketing ofrece promociones a estos clientes y <strong>el 20% de ellos las acepta</strong>, <strong>93 clientes podrían ser retenidos cada mes</strong>.</li>
+                    <li>Esto representaría una <strong>reducción de la tasa de cancelación del 19.91%</strong>, bajando del <strong>8.29% al 6.63%</strong>, con un impacto significativo en la retención y los ingresos de la empresa.</li>
+                </ul>
             </div>
         </div>
+
+        <!-- Proyecto 2 -->
         <div class="project">
-            <img src="proyecto3.jpg" alt="Predicción y seguridad de datos en seguros">
-            <div class="project-info">
-                <h1>Predicción y seguridad de datos en seguros</h1>
-                <p>Sure Tomorrow implementó modelos de Machine Learning para segmentación de clientes, predicción de
-                    prestaciones y protección de datos. Se logró ofuscar información sin afectar el rendimiento del
-                    modelo, asegurando privacidad sin sacrificar precisión.</p>
-                <a
-                    href="https://github.com/erikmarquezhernandez/Regresion-lineal-con-algebra-lineal/blob/main/Proyecto%2011%20vf.ipynb">Ver
-                    más</a>
+            <h3>Predicción de demanda de taxis en aeropuertos</h3>
+            <div class="project-grid">
+                <div class="project-image">
+                    <img src="proyecto2.jpg" alt="Predicción de demanda de taxis">
+                </div>
+                <div class="project-details">
+                    <h4>Situación</h4>
+                    <p>Sweet Lift Taxi busca optimizar la disponibilidad de conductores en aeropuertos.</p>
+                </div>
+            </div>
+            <div class="project-full">
+                <h4>Tarea</h4>
+                <p>Implementar un modelo de Regresión Lineal para predecir la demanda de taxis en aeropuertos.</p>
+
+                <h4>Acción</h4>
+                <ul>
+                    <li>Se utilizaron datos históricos de demanda.</li>
+                    <li>Se implementó un modelo de Regresión Lineal con un RMSE de 35.84.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <ul>
+                    <li>Mejora en la planificación de recursos y reducción de tiempos de espera.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project">
+            <h3>Predicción y seguridad de datos en seguros</h3>
+            <div class="project-grid">
+                <div class="project-image">
+                    <img src="proyecto3.jpg" alt="Predicción y seguridad de datos">
+                </div>
+                <div class="project-details">
+                    <h4>Situación</h4>
+                    <p>Sure Tomorrow busca proteger datos sensibles sin afectar el rendimiento del modelo.</p>
+                </div>
+            </div>
+            <div class="project-full">
+                <h4>Tarea</h4>
+                <p>Implementar modelos de Machine Learning para segmentación de clientes y protección de datos.</p>
+
+                <h4>Acción</h4>
+                <ul>
+                    <li>Se ofuscaron datos sensibles sin afectar la precisión del modelo.</li>
+                </ul>
+
+                <h4>Resultado</h4>
+                <ul>
+                    <li>Seguridad de datos garantizada sin sacrificar el rendimiento del modelo.</li>
+                </ul>
             </div>
         </div>
     </section>
