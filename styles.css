@@ -13,7 +13,8 @@ header {
     text-align: center;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-bottom: 10px;
 }
 
@@ -60,8 +61,10 @@ footer {
 
 .carousel-container {
     width: 100%;
-    max-width: 1200px; /* Ajusta según lo necesites */
-    height: 400px; /* Altura fija para uniformidad */
+    max-width: 1200px;
+    /* Ajusta según lo necesites */
+    height: 400px;
+    /* Altura fija para uniformidad */
     overflow: hidden;
     position: relative;
     margin: auto;
@@ -70,6 +73,77 @@ footer {
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    object-fit: cover;
+    /* Ajusta la imagen sin deformarla */
     position: absolute;
+}
+
+.carousel-image {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .carousel-container {
+        height: 200px;
+    }
+}
+
+.project {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.project img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilos para la nueva estructura - Versión azul */
+.project-description h3 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    /* Azul oscuro del header */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    /* Azul de los enlaces */
+    padding-bottom: 5px;
+}
+
+.project-description h4 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    /* Mismo azul oscuro */
+    margin: 15px 0 10px 0;
+}
+
+.project-description ul {
+    margin: 10px 0 15px 20px;
+}
+
+.project-description li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #333;
+    /* Color base del texto */
+}
+
+.project-description strong {
+    color: #3498db;
+    /* Azul claro de los enlaces */
+    font-weight: 600;
+    /* Negrita pero no excesiva */
 }
