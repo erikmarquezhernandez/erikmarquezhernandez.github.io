@@ -55,6 +55,49 @@
     <section id="projects">
         <h2 style="text-align: center;">Contenido de Portafolio:</h2>
 
+        <!-- Proyecto star -->
+        <div class="project">
+            <h3>Predicción del Promedio Mensual de Pasajeros para una Aerolínea</h3>
+        
+            <!-- Columnas para imagen y situación -->
+            <div class="project-grid">
+                <div class="project-image">
+                    <img src="aerolinea.jpg" alt="Modelo de pronóstico de pasajeros">
+                </div>
+                <div class="project-details">
+                    <h4>Situación</h4>
+                    <p>La aerolínea enfrentaba el desafío de mejorar su capacidad para pronosticar el promedio mensual de pasajeros, con el fin de optimizar la asignación de recursos, ajustar estrategias de precios y planificar campañas de marketing de manera más precisa.</p>
+                </div>
+            </div>
+        
+            <!-- Resto del contenido en una sola columna -->
+            <div class="project-full">
+                <h4>Tarea</h4>
+                <p>Desarrollar un modelo predictivo que redujera significativamente el error de pronóstico medido por el $RMSE$, proporcionando una herramienta analítica robusta para la toma de decisiones operativas y estratégicas.</p>
+        
+                <h4>Acción</h4>
+                <ul>
+                    <li><strong>Análisis exploratorio de datos (EDA):</strong><br>
+                        - Se verificó la calidad de la información, detectando y manejando valores atípicos, y comprendiendo la distribución de la serie.</li>
+                    <li><strong>Descomposición de la serie temporal:</strong><br>
+                        - Se descompuso la serie en tendencia, estacionalidad y residuo, identificando la naturaleza multiplicativa mediante el análisis de heterocedasticidad.</li>
+                    <li><strong>Aplicación de transformación Box-Cox:</strong><br>
+                        - Se aplicó la transformación Box-Cox ($\lambda = 0.1480$) para estabilizar la varianza y corregir la heterocedasticidad.</li>
+                    <li><strong>Implementación de modelos predictivos:</strong><br>
+                        - Se utilizó el modelo Prophet y, en paralelo, un modelo ARIMA optimizado mediante validación cruzada y GridSearch para ajustar los hiperparámetros.</li>
+                    <li><strong>Comparación de resultados:</strong><br>
+                        - Se evaluó el desempeño de los modelos en función del $RMSE$, comparando los resultados en la escala transformada y tras invertir la transformación.</li>
+                </ul>
+        
+                <h4>Resultado</h4>
+                <ul>
+                    <li>El enfoque implementado permitió reducir el $RMSE$ en un <strong>66%</strong>, pasando de $35.52$ a $12.14$.</li>
+                    <li>Esta mejora en la precisión del pronóstico optimiza la asignación de recursos, permitiendo una planificación operativa más eficiente.</li>
+                    <li>El modelo se posiciona como una herramienta clave para ajustar estrategias de precios, campañas de marketing y tomar decisiones estratégicas que impacten positivamente en la rentabilidad operativa.</li>
+                </ul>
+            </div>
+        </div>
+        
         <!-- Proyecto 1 -->
         <div class="project">
             <h3>Pronóstico de cancelación de clientes y estrategias de retención</h3>
