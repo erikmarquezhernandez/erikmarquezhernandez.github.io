@@ -156,6 +156,62 @@
             </div>
         </div>
 
+                <!-- Proyecto Qualitas -->
+        <div class="project">
+            <h3>Análisis y Pronóstico de los Precios de Qualitas</h3>
+        
+            <!-- Columnas para imagen y situación -->
+            <div class="project-grid">
+                <div class="project-image">
+                    <img src="qualitas.jpg" alt="Pronóstico de precios de Qualitas">
+                </div>
+                <div class="project-details">
+                    <h4>Situación</h4>
+                    <p>En un contexto financiero, surge la necesidad de desarrollar un modelo para <strong>pronosticar los precios de las acciones de Qualitas</strong>, con el fin de explorar la precisión de distintos enfoques de series de tiempo. Dado que los precios bursátiles presentan volatilidad y patrones complejos, era esencial comparar modelos tradicionales con técnicas más avanzadas para identificar la mejor opción.</p>
+                </div>
+            </div>
+        
+            <!-- Resto del contenido en una sola columna -->
+            <div class="project-full">
+                <h4>Tarea</h4>
+                <p>El objetivo principal del proyecto fue:</p>
+                <ul>
+                    <li>Construir un modelo predictivo capaz de <strong>pronosticar los precios de las acciones de Qualitas</strong>, evaluando la precisión de diversos enfoques mediante la métrica <strong>RMSE</strong>.</li>
+                    <li>Implementar tanto <strong>modelos clásicos</strong> de series de tiempo (<em>ARIMA, SARIMA, ARMA</em>) como técnicas avanzadas (<em>GARCH, Prophet, LSTM</em>).</li>
+                    <li>Optimizar el modelo <strong>LSTM</strong> aplicando <strong>validación cruzada</strong> y <strong>GridSearch</strong> para ajustar sus hiperparámetros, asegurando un ajuste más riguroso del modelo.</li>
+                </ul>
+        
+                <h4>Acción</h4>
+                <ul>
+                    <li><strong>Obtención y preparación de datos:</strong><br>
+                        - Descargué los precios históricos de Qualitas desde <code>yfinance</code>, implementando una función para validar la existencia del archivo local antes de realizar nuevas descargas, evitando limitaciones por múltiples solicitudes.<br>
+                        - Realicé un análisis exploratorio para evaluar la estacionariedad mediante la <strong>prueba de Dickey-Fuller</strong>, aplicando transformaciones (<em>diferenciación</em>) cuando fue necesario.<br>
+                        - Utilicé técnicas de suavizado (<strong>SMA, EWMA</strong>) para visualizar la tendencia subyacente y apliqué <strong>ACF</strong> y <strong>PACF</strong> para identificar la estructura de autocorrelación.</li>
+                    
+                    <li><strong>Modelado:</strong><br>
+                        - <strong>Modelos clásicos:</strong><br>
+                            - Implementé modelos <strong>AR, MA, ARMA, ARIMA y SARIMA</strong>, optimizando los parámetros mediante <strong>GridSearch</strong> y validando la significancia de los coeficientes.<br>
+                            - Incorporé variables exógenas con <strong>ARMAX</strong>, utilizando el índice IPC México, evidenciando la capacidad del modelo para captar correlaciones externas.<br>
+                        - <strong>Modelos avanzados:</strong><br>
+                            - Utilicé <strong>GARCH</strong> para modelar la volatilidad de los retornos, evidenciando que la varianza presenta memoria a largo plazo.<br>
+                            - Implementé <strong>Prophet</strong>, que superó a ARIMA en precisión, logrando una mejora significativa del <strong>28%</strong> en el RMSE.<br>
+                            - Construí un modelo <strong>LSTM</strong>, ajustando la secuencia temporal a <strong>20 días hábiles</strong> para capturar patrones a corto plazo.<br>
+                            - Apliqué <strong>validación cruzada</strong> y <strong>GridSearch</strong> para optimizar el modelo <strong>LSTM</strong>, ajustando hiperparámetros como la cantidad de neuronas, la tasa de aprendizaje y el tamaño del lote, aunque el modelo original obtuvo un mejor RMSE.<br>
+                            - Utilicé predicción recursiva con <strong>LSTM</strong>, observando cómo el error acumulado reducía la precisión en horizontes largos.</li>
+                </ul>
+        
+                <h4>Resultado</h4>
+                <ul>
+                    <li>El modelo <strong>LSTM original</strong> resultó ser el más preciso a corto plazo, con un RMSE de <strong>5.974</strong>, superando significativamente a todos los modelos tradicionales.</li>
+                    <li>La optimización del <strong>LSTM</strong> con <strong>validación cruzada</strong> y <strong>GridSearch</strong> no mejoró el RMSE, pero evidenció la robustez del modelo base.</li>
+                    <li><strong>Prophet</strong> logró un RMSE de <strong>25.146</strong>, mejorando en un <strong>28%</strong> el error de ARIMA.</li>
+                    <li><strong>GARCH(1,2)</strong> modeló la volatilidad con éxito, mostrando que la varianza dependía de dos lags previos, reflejando memoria a largo plazo.</li>
+                    <li>La predicción recursiva con <strong>LSTM</strong> acumuló error, resultando en menor precisión a largo plazo (RMSE de <strong>60.8222</strong> para un año).</li>
+                    <a href="https://github.com/erikmarquezhernandez/Analisis-y-pronosticos-de-los-precios-de-Qualitas" target="_blank">Ver más</a>
+                </ul>
+            </div>
+        </div>
+
         <!-- Proyecto 2 -->
         <div class="project">
             <h3>Predicción de demanda de taxis en aeropuertos</h3>
