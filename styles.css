@@ -141,3 +141,26 @@ footer {
         flex-direction: column;
     }
 }
+
+nav {
+    background-color: #3498db;  /* Fondo azul */
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;  /* Cambié el color del texto a blanco */
+    font-weight: bold;
+    font-size: 1.2em;  /* Tamaño de fuente ligeramente mayor */
+}
+
+
+nav a:hover {
+    color: #f4f4f4;  /* Color blanco al pasar el mouse */
+    text-decoration: underline;  /* Subraya el texto */
+    transition: all 0.3s ease;  /* Efecto suave de transición */
+}
