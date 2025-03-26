@@ -141,7 +141,7 @@ footer {
         flex-direction: column;
     }
 }
-
+/* el menu en forma de lista */
 nav {
     background-color: #3498db;  /* Fondo azul */
     padding: 15px;
@@ -150,17 +150,29 @@ nav {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: white;  /* Cambié el color del texto a blanco */
-    font-weight: bold;
-    font-size: 1.2em;  /* Tamaño de fuente ligeramente mayor */
+nav ul {
+    padding: 0;
+    list-style-type: none;  /* Quitamos los puntos de la lista */
 }
 
+nav ul li {
+    margin: 10px 0;  /* Espaciado vertical entre los elementos */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;  /* Texto blanco */
+    font-weight: bold;
+    font-size: 1.2em;  /* Tamaño de la fuente */
+    display: block;  /* Hace que cada enlace ocupe toda la línea */
+    padding: 10px;
+    text-align: center;
+}
 
 nav a:hover {
-    color: #f4f4f4;  /* Color blanco al pasar el mouse */
+    color: #f4f4f4;  /* Cambia el color cuando pasa el ratón */
     text-decoration: underline;  /* Subraya el texto */
+    background-color: #2980b9;  /* Cambia el fondo al pasar el mouse */
     transition: all 0.3s ease;  /* Efecto suave de transición */
 }
+
